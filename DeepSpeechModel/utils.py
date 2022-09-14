@@ -149,7 +149,6 @@ def data_processor(data,text_transforms,train=True):
         input_len.append(spec.shape[0]//2)
         label_len.append(len(labels))
         
-    
     spectrograms = nn.utils.rnn.pad_sequence(spectrograms,\
     batch_first=True).unsqueeze(1).transpose(2,3) #(batch,n_channels,n_feats,time)
     
